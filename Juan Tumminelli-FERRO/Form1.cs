@@ -15,6 +15,50 @@ namespace Juan_Tumminelli_FERRO
         public Form1()
         {
             InitializeComponent();
+         
+            if (this.cboFromProvince.Items.Count > 0) this.cboFromProvince.SelectedIndex = 0;
+            if (this.cboToProvince.Items.Count > 0) this.cboToProvince.SelectedIndex = 0;
+        }
+
+        private void CboFromProvince_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PopulateAirportsForProvince(this.cboFromProvince.SelectedItem as string, this.cboFromAirport);
+        }
+
+        private void CboToProvince_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PopulateAirportsForProvince(this.cboToProvince.SelectedItem as string, this.cboToAirport);
+        }
+
+        private void PopulateAirportsForProvince(string province, ComboBox target)
+        {
+            target.Items.Clear();
+            if (string.IsNullOrEmpty(province)) return;
+
+          
+            switch (province)
+            {
+                case "Buenos Aires":
+                    target.Items.AddRange(new object[] { "Ezeiza (EZE)", "Aeroparque (AEP)", "Mar del Plata (MDQ)" });
+                    break;
+                case "Córdoba":
+                    target.Items.AddRange(new object[] { "Pajas Blancas (COR)" });
+                    break;
+                case "Mendoza":
+                    target.Items.AddRange(new object[] { "El Plumerillo (MDZ)" });
+                    break;
+                case "Neuquén":
+                    target.Items.AddRange(new object[] { "Presidente Perón (NQN)" });
+                    break;
+                case "Tierra del Fuego":
+                    target.Items.AddRange(new object[] { "Ushuaia (USH)" });
+                    break;
+                default:
+                    target.Items.AddRange(new object[] { "Aeropuerto local" });
+                    break;
+            }
+
+            if (target.Items.Count > 0) target.SelectedIndex = 0;
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -22,7 +66,7 @@ namespace Juan_Tumminelli_FERRO
             const decimal pricePerKm = 5m;
             const decimal discountFactor = 0.5m;
 
-            // Validate distance input
+      
             if (!decimal.TryParse(txtDistance.Text.Trim(), out decimal distanceOneWay))
             {
                 MessageBox.Show("Ingrese una distancia válida en kilómetros.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -37,19 +81,88 @@ namespace Juan_Tumminelli_FERRO
                 return;
             }
 
-            int days = (int)nudDays.Value;
+           
+            DateTime departureDate = this.dtpDeparture.Value.Date;
+            DateTime returnDate = this.dtpReturn.Value.Date;
 
-            // distance total for round trip
+            if (returnDate <= departureDate)
+            {
+                MessageBox.Show("La fecha de regreso debe ser posterior a la de salida.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.dtpReturn.Focus();
+                return;
+            }
+
+            int days = (int)(returnDate - departureDate).TotalDays;
+
+     
             decimal totalDistance = distanceOneWay * 2m;
             decimal price = totalDistance * pricePerKm;
 
-            // apply discount if conditions met
-            if (distanceOneWay >= 100m && days >= 7)
+          
+            bool promotionApplied = (distanceOneWay >= 100m && days >= 7);
+            if (promotionApplied)
             {
                 price = price * discountFactor;
             }
 
-            MessageBox.Show($"El precio del boleto (ida y vuelta) es: {price:C2}", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
+            string fromProvince = this.cboFromProvince.SelectedItem != null ? this.cboFromProvince.SelectedItem.ToString() : "";
+            string fromAirport = this.cboFromAirport.SelectedItem != null ? this.cboFromAirport.SelectedItem.ToString() : "";
+            string toProvince = this.cboToProvince.SelectedItem != null ? this.cboToProvince.SelectedItem.ToString() : "";
+            string toAirport = this.cboToAirport.SelectedItem != null ? this.cboToAirport.SelectedItem.ToString() : "";
+            int persons = (int)this.nudPersons.Value;
+            string travelClass = this.cboClass.SelectedItem != null ? this.cboClass.SelectedItem.ToString() : this.cboClass.Text;
+            string currency = this.cboCurrency.SelectedItem != null ? this.cboCurrency.SelectedItem.ToString() : this.cboCurrency.Text;
+
+            string summary =
+                "Resumen de búsqueda:\r\n" +
+                $"Origen: {fromProvince} - {fromAirport}\r\n" +
+                $"Destino: {toProvince} - {toAirport}\r\n" +
+                $"Salida: {departureDate:d}   Regreso: {returnDate:d}\r\n" +
+                $"Días de estancia: {days}\r\n" +
+                $"Personas: {persons}   Clase: {travelClass}\r\n" +
+                $"Distancia ida (km): {distanceOneWay}   Distancia total (ida y vuelta): {totalDistance}\r\n" +
+                $"Precio por km: {pricePerKm:C2}\r\n" +
+                $"Promoción aplicada: {(promotionApplied ? "SÍ (50% off)" : "NO")}\r\n" +
+                $"Precio final (ida y vuelta): {price:C2}";
+
+            MessageBox.Show(summary, "Resultado de búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+         
+            this.txtTotal.Text = price.ToString("F2");
+           
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(this.txtTotal.Text))
+            {
+                MessageBox.Show("No hay un total calculado. Busque primero para calcular el precio.", "Pago", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MessageBox.Show($"Procesando pago de {this.txtTotal.Text} {this.cboCurrency.SelectedItem}", "Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void grpPromotions_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpReturn_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFrom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
