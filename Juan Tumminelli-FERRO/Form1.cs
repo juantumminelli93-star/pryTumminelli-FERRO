@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace Juan_Tumminelli_FERRO
 {
-    public partial class Form1 : Form
+    public partial class AirLux : Form
     {
-        public Form1()
+        public AirLux()
         {
             InitializeComponent();
          
-            if (this.cboFromProvince.Items.Count > 0) this.cboFromProvince.SelectedIndex = 0;
-            if (this.cboToProvince.Items.Count > 0) this.cboToProvince.SelectedIndex = 0;
+            if (this.cboDeProvincias.Items.Count > 0) this.cboDeProvincias.SelectedIndex = 0;
+            if (this.cboDeProvincias2.Items.Count > 0) this.cboDeProvincias2.SelectedIndex = 0;
         }
 
         private void CboFromProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PopulateAirportsForProvince(this.cboFromProvince.SelectedItem as string, this.cboFromAirport);
+            PopulateAirportsForProvince(this.cboDeProvincias.SelectedItem as string, this.cboFromAero);
         }
 
         private void CboToProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PopulateAirportsForProvince(this.cboToProvince.SelectedItem as string, this.cboToAirport);
+            PopulateAirportsForProvince(this.cboDeProvincias2.SelectedItem as string, this.cbofromAero2);
         }
 
         private void PopulateAirportsForProvince(string province, ComboBox target)
@@ -67,22 +67,22 @@ namespace Juan_Tumminelli_FERRO
             const decimal discountFactor = 0.5m;
 
       
-            if (!decimal.TryParse(txtDistance.Text.Trim(), out decimal distanceOneWay))
+            if (!decimal.TryParse(txtDistancia.Text.Trim(), out decimal distanceOneWay))
             {
                 MessageBox.Show("Ingrese una distancia válida en kilómetros.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDistance.Focus();
+                txtDistancia.Focus();
                 return;
             }
 
             if (distanceOneWay <= 0)
             {
                 MessageBox.Show("La distancia debe ser mayor que 0.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtDistance.Focus();
+                txtDistancia.Focus();
                 return;
             }
 
            
-            DateTime departureDate = this.dtpDeparture.Value.Date;
+            DateTime departureDate = this.dtpSalida.Value.Date;
             DateTime returnDate = this.dtpReturn.Value.Date;
 
             if (returnDate <= departureDate)
@@ -106,13 +106,13 @@ namespace Juan_Tumminelli_FERRO
             }
 
            
-            string fromProvince = this.cboFromProvince.SelectedItem != null ? this.cboFromProvince.SelectedItem.ToString() : "";
-            string fromAirport = this.cboFromAirport.SelectedItem != null ? this.cboFromAirport.SelectedItem.ToString() : "";
-            string toProvince = this.cboToProvince.SelectedItem != null ? this.cboToProvince.SelectedItem.ToString() : "";
-            string toAirport = this.cboToAirport.SelectedItem != null ? this.cboToAirport.SelectedItem.ToString() : "";
+            string fromProvince = this.cboDeProvincias.SelectedItem != null ? this.cboDeProvincias.SelectedItem.ToString() : "";
+            string fromAirport = this.cboFromAero.SelectedItem != null ? this.cboFromAero.SelectedItem.ToString() : "";
+            string toProvince = this.cboDeProvincias2.SelectedItem != null ? this.cboDeProvincias2.SelectedItem.ToString() : "";
+            string toAirport = this.cbofromAero2.SelectedItem != null ? this.cbofromAero2.SelectedItem.ToString() : "";
             int persons = (int)this.nudPersons.Value;
             string travelClass = this.cboClass.SelectedItem != null ? this.cboClass.SelectedItem.ToString() : this.cboClass.Text;
-            string currency = this.cboCurrency.SelectedItem != null ? this.cboCurrency.SelectedItem.ToString() : this.cboCurrency.Text;
+            string currency = this.cbomoneda.SelectedItem != null ? this.cbomoneda.SelectedItem.ToString() : this.cbomoneda.Text;
 
             string summary =
                 "Resumen de búsqueda:\r\n" +
@@ -142,7 +142,7 @@ namespace Juan_Tumminelli_FERRO
                 return;
             }
 
-            MessageBox.Show($"Procesando pago de {this.txtTotal.Text} {this.cboCurrency.SelectedItem}", "Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Procesando pago de {this.txtTotal.Text} {this.cbomoneda.SelectedItem}", "Pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void grpPromotions_Enter(object sender, EventArgs e)

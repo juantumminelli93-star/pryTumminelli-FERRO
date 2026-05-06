@@ -1,36 +1,36 @@
 ﻿namespace Juan_Tumminelli_FERRO
 {
-    partial class Form1
+    partial class AirLux
     {
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Label lblFlights;
-        private System.Windows.Forms.Label lblDistance;
-        private System.Windows.Forms.TextBox txtDistance;
+        private System.Windows.Forms.Label lbltitulo;
+        private System.Windows.Forms.Label lblDistancia;
+        private System.Windows.Forms.TextBox txtDistancia;
         private System.Windows.Forms.Label lblFrom;
-        private System.Windows.Forms.ComboBox cboFromProvince;
-        private System.Windows.Forms.ComboBox cboFromAirport;
-        private System.Windows.Forms.Label lblTo;
-        private System.Windows.Forms.ComboBox cboToProvince;
-        private System.Windows.Forms.ComboBox cboToAirport;
+        private System.Windows.Forms.ComboBox cboDeProvincias;
+        private System.Windows.Forms.ComboBox cboFromAero;
+        private System.Windows.Forms.Label lblvoy;
+        private System.Windows.Forms.ComboBox cboDeProvincias2;
+        private System.Windows.Forms.ComboBox cbofromAero2;
         private System.Windows.Forms.Label lblDays;
-        private System.Windows.Forms.Label lblDeparture;
-        private System.Windows.Forms.DateTimePicker dtpDeparture;
+        private System.Windows.Forms.Label lblsalida;
+        private System.Windows.Forms.DateTimePicker dtpSalida;
         private System.Windows.Forms.Label lblReturn;
         private System.Windows.Forms.DateTimePicker dtpReturn;
-        private System.Windows.Forms.Label lblPersons;
+        private System.Windows.Forms.Label lblPersonas;
         private System.Windows.Forms.NumericUpDown nudPersons;
         private System.Windows.Forms.Label lblClass;
         private System.Windows.Forms.ComboBox cboClass;
-        private System.Windows.Forms.Label lblCurrency;
-        private System.Windows.Forms.ComboBox cboCurrency;
-        private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.GroupBox grpPromotions;
-        private System.Windows.Forms.Label lblPromotionsText;
+        private System.Windows.Forms.Label lblmoneda;
+        private System.Windows.Forms.ComboBox cbomoneda;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.GroupBox grpDescuent;
+        private System.Windows.Forms.Label lblPromocionText;
         private System.Windows.Forms.Label lblInfo;
-        private System.Windows.Forms.GroupBox grpPayment;
+        private System.Windows.Forms.GroupBox grpPay;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnPay;
@@ -56,80 +56,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.lblFlights = new System.Windows.Forms.Label();
-            this.lblDistance = new System.Windows.Forms.Label();
-            this.txtDistance = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AirLux));
+            this.lbltitulo = new System.Windows.Forms.Label();
+            this.lblDistancia = new System.Windows.Forms.Label();
+            this.txtDistancia = new System.Windows.Forms.TextBox();
             this.lblFrom = new System.Windows.Forms.Label();
-            this.cboFromProvince = new System.Windows.Forms.ComboBox();
-            this.cboFromAirport = new System.Windows.Forms.ComboBox();
-            this.lblTo = new System.Windows.Forms.Label();
-            this.cboToProvince = new System.Windows.Forms.ComboBox();
-            this.cboToAirport = new System.Windows.Forms.ComboBox();
+            this.cboDeProvincias = new System.Windows.Forms.ComboBox();
+            this.cboFromAero = new System.Windows.Forms.ComboBox();
+            this.lblvoy = new System.Windows.Forms.Label();
+            this.cboDeProvincias2 = new System.Windows.Forms.ComboBox();
+            this.cbofromAero2 = new System.Windows.Forms.ComboBox();
             this.lblDays = new System.Windows.Forms.Label();
-            this.lblDeparture = new System.Windows.Forms.Label();
-            this.dtpDeparture = new System.Windows.Forms.DateTimePicker();
+            this.lblsalida = new System.Windows.Forms.Label();
+            this.dtpSalida = new System.Windows.Forms.DateTimePicker();
             this.lblReturn = new System.Windows.Forms.Label();
             this.dtpReturn = new System.Windows.Forms.DateTimePicker();
-            this.lblPersons = new System.Windows.Forms.Label();
+            this.lblPersonas = new System.Windows.Forms.Label();
             this.nudPersons = new System.Windows.Forms.NumericUpDown();
             this.lblClass = new System.Windows.Forms.Label();
             this.cboClass = new System.Windows.Forms.ComboBox();
-            this.lblCurrency = new System.Windows.Forms.Label();
-            this.cboCurrency = new System.Windows.Forms.ComboBox();
-            this.btnCalculate = new System.Windows.Forms.Button();
+            this.lblmoneda = new System.Windows.Forms.Label();
+            this.cbomoneda = new System.Windows.Forms.ComboBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.grpPromotions = new System.Windows.Forms.GroupBox();
-            this.lblPromotionsText = new System.Windows.Forms.Label();
-            this.grpPayment = new System.Windows.Forms.GroupBox();
+            this.grpDescuent = new System.Windows.Forms.GroupBox();
+            this.lblPromocionText = new System.Windows.Forms.Label();
+            this.grpPay = new System.Windows.Forms.GroupBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnPay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPersons)).BeginInit();
-            this.grpPromotions.SuspendLayout();
-            this.grpPayment.SuspendLayout();
+            this.grpDescuent.SuspendLayout();
+            this.grpPay.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblFlights
+            // lbltitulo
             // 
-            this.lblFlights.AutoSize = true;
-            this.lblFlights.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFlights.Location = new System.Drawing.Point(12, 9);
-            this.lblFlights.Name = "lblFlights";
-            this.lblFlights.Size = new System.Drawing.Size(64, 20);
-            this.lblFlights.TabIndex = 0;
-            this.lblFlights.Text = "Vuelos";
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(12, 9);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(58, 20);
+            this.lbltitulo.TabIndex = 0;
+            this.lbltitulo.Text = "Viajes";
             // 
-            // lblDistance
+            // lblDistancia
             // 
-            this.lblDistance.AutoSize = true;
-            this.lblDistance.Location = new System.Drawing.Point(12, 40);
-            this.lblDistance.Name = "lblDistance";
-            this.lblDistance.Size = new System.Drawing.Size(178, 13);
-            this.lblDistance.TabIndex = 2;
-            this.lblDistance.Text = "Distancia al destino (kilómetros, ida):";
+            this.lblDistancia.AutoSize = true;
+            this.lblDistancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDistancia.Location = new System.Drawing.Point(6, 40);
+            this.lblDistancia.Name = "lblDistancia";
+            this.lblDistancia.Size = new System.Drawing.Size(153, 13);
+            this.lblDistancia.TabIndex = 2;
+            this.lblDistancia.Text = " (distancia de kilómetros):";
             // 
-            // txtDistance
+            // txtDistancia
             // 
-            this.txtDistance.Location = new System.Drawing.Point(15, 56);
-            this.txtDistance.Name = "txtDistance";
-            this.txtDistance.Size = new System.Drawing.Size(150, 20);
-            this.txtDistance.TabIndex = 3;
+            this.txtDistancia.Location = new System.Drawing.Point(15, 56);
+            this.txtDistancia.Name = "txtDistancia";
+            this.txtDistancia.Size = new System.Drawing.Size(144, 20);
+            this.txtDistancia.TabIndex = 3;
             // 
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
+            this.lblFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFrom.Location = new System.Drawing.Point(190, 40);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(52, 13);
+            this.lblFrom.Size = new System.Drawing.Size(61, 13);
             this.lblFrom.TabIndex = 4;
             this.lblFrom.Text = "Salgo de:";
             this.lblFrom.Click += new System.EventHandler(this.lblFrom_Click);
             // 
-            // cboFromProvince
+            // cboDeProvincias
             // 
-            this.cboFromProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFromProvince.Items.AddRange(new object[] {
+            this.cboDeProvincias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDeProvincias.Items.AddRange(new object[] {
             "Buenos Aires",
             "Catamarca",
             "Chaco",
@@ -152,33 +154,34 @@
             "Santa Fe",
             "Santiago del Estero",
             "Tierra del Fuego"});
-            this.cboFromProvince.Location = new System.Drawing.Point(190, 56);
-            this.cboFromProvince.Name = "cboFromProvince";
-            this.cboFromProvince.Size = new System.Drawing.Size(120, 21);
-            this.cboFromProvince.TabIndex = 5;
-            this.cboFromProvince.SelectedIndexChanged += new System.EventHandler(this.CboFromProvince_SelectedIndexChanged);
+            this.cboDeProvincias.Location = new System.Drawing.Point(182, 56);
+            this.cboDeProvincias.Name = "cboDeProvincias";
+            this.cboDeProvincias.Size = new System.Drawing.Size(128, 21);
+            this.cboDeProvincias.TabIndex = 5;
+            this.cboDeProvincias.SelectedIndexChanged += new System.EventHandler(this.CboFromProvince_SelectedIndexChanged);
             // 
-            // cboFromAirport
+            // cboFromAero
             // 
-            this.cboFromAirport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboFromAirport.Location = new System.Drawing.Point(315, 56);
-            this.cboFromAirport.Name = "cboFromAirport";
-            this.cboFromAirport.Size = new System.Drawing.Size(185, 21);
-            this.cboFromAirport.TabIndex = 6;
+            this.cboFromAero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFromAero.Location = new System.Drawing.Point(330, 56);
+            this.cboFromAero.Name = "cboFromAero";
+            this.cboFromAero.Size = new System.Drawing.Size(170, 21);
+            this.cboFromAero.TabIndex = 6;
             // 
-            // lblTo
+            // lblvoy
             // 
-            this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(21, 140);
-            this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(37, 13);
-            this.lblTo.TabIndex = 14;
-            this.lblTo.Text = "Voy a:";
+            this.lblvoy.AutoSize = true;
+            this.lblvoy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvoy.Location = new System.Drawing.Point(13, 140);
+            this.lblvoy.Name = "lblvoy";
+            this.lblvoy.Size = new System.Drawing.Size(43, 13);
+            this.lblvoy.TabIndex = 14;
+            this.lblvoy.Text = "Voy a:";
             // 
-            // cboToProvince
+            // cboDeProvincias2
             // 
-            this.cboToProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboToProvince.Items.AddRange(new object[] {
+            this.cboDeProvincias2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDeProvincias2.Items.AddRange(new object[] {
             "Buenos Aires",
             "Catamarca",
             "Chaco",
@@ -201,19 +204,19 @@
             "Santa Fe",
             "Santiago del Estero",
             "Tierra del Fuego"});
-            this.cboToProvince.Location = new System.Drawing.Point(16, 156);
-            this.cboToProvince.Name = "cboToProvince";
-            this.cboToProvince.Size = new System.Drawing.Size(120, 21);
-            this.cboToProvince.TabIndex = 15;
-            this.cboToProvince.SelectedIndexChanged += new System.EventHandler(this.CboToProvince_SelectedIndexChanged);
+            this.cboDeProvincias2.Location = new System.Drawing.Point(16, 156);
+            this.cboDeProvincias2.Name = "cboDeProvincias2";
+            this.cboDeProvincias2.Size = new System.Drawing.Size(143, 21);
+            this.cboDeProvincias2.TabIndex = 15;
+            this.cboDeProvincias2.SelectedIndexChanged += new System.EventHandler(this.CboToProvince_SelectedIndexChanged);
             // 
-            // cboToAirport
+            // cbofromAero2
             // 
-            this.cboToAirport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboToAirport.Location = new System.Drawing.Point(140, 156);
-            this.cboToAirport.Name = "cboToAirport";
-            this.cboToAirport.Size = new System.Drawing.Size(200, 21);
-            this.cboToAirport.TabIndex = 16;
+            this.cbofromAero2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbofromAero2.Location = new System.Drawing.Point(182, 156);
+            this.cbofromAero2.Name = "cbofromAero2";
+            this.cbofromAero2.Size = new System.Drawing.Size(128, 21);
+            this.cbofromAero2.TabIndex = 16;
             // 
             // lblDays
             // 
@@ -222,51 +225,54 @@
             this.lblDays.Size = new System.Drawing.Size(100, 23);
             this.lblDays.TabIndex = 0;
             // 
-            // lblDeparture
+            // lblsalida
             // 
-            this.lblDeparture.AutoSize = true;
-            this.lblDeparture.Location = new System.Drawing.Point(12, 86);
-            this.lblDeparture.Name = "lblDeparture";
-            this.lblDeparture.Size = new System.Drawing.Size(36, 13);
-            this.lblDeparture.TabIndex = 8;
-            this.lblDeparture.Text = "Salida";
+            this.lblsalida.AutoSize = true;
+            this.lblsalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsalida.Location = new System.Drawing.Point(13, 87);
+            this.lblsalida.Name = "lblsalida";
+            this.lblsalida.Size = new System.Drawing.Size(48, 15);
+            this.lblsalida.TabIndex = 8;
+            this.lblsalida.Text = "Salida";
             // 
-            // dtpDeparture
+            // dtpSalida
             // 
-            this.dtpDeparture.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDeparture.Location = new System.Drawing.Point(15, 102);
-            this.dtpDeparture.Name = "dtpDeparture";
-            this.dtpDeparture.Size = new System.Drawing.Size(120, 20);
-            this.dtpDeparture.TabIndex = 9;
-            this.dtpDeparture.Value = new System.DateTime(2026, 5, 5, 0, 0, 0, 0);
+            this.dtpSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpSalida.Location = new System.Drawing.Point(16, 103);
+            this.dtpSalida.Name = "dtpSalida";
+            this.dtpSalida.Size = new System.Drawing.Size(143, 20);
+            this.dtpSalida.TabIndex = 9;
+            this.dtpSalida.Value = new System.DateTime(2026, 5, 5, 0, 0, 0, 0);
             // 
             // lblReturn
             // 
             this.lblReturn.AutoSize = true;
-            this.lblReturn.Location = new System.Drawing.Point(190, 86);
+            this.lblReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReturn.Location = new System.Drawing.Point(187, 86);
             this.lblReturn.Name = "lblReturn";
-            this.lblReturn.Size = new System.Drawing.Size(47, 13);
+            this.lblReturn.Size = new System.Drawing.Size(54, 13);
             this.lblReturn.TabIndex = 10;
             this.lblReturn.Text = "Regreso";
             // 
             // dtpReturn
             // 
             this.dtpReturn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpReturn.Location = new System.Drawing.Point(190, 102);
+            this.dtpReturn.Location = new System.Drawing.Point(182, 102);
             this.dtpReturn.Name = "dtpReturn";
-            this.dtpReturn.Size = new System.Drawing.Size(120, 20);
+            this.dtpReturn.Size = new System.Drawing.Size(128, 20);
             this.dtpReturn.TabIndex = 11;
             this.dtpReturn.Value = new System.DateTime(2026, 5, 6, 0, 0, 0, 0);
             this.dtpReturn.ValueChanged += new System.EventHandler(this.dtpReturn_ValueChanged);
             // 
-            // lblPersons
+            // lblPersonas
             // 
-            this.lblPersons.AutoSize = true;
-            this.lblPersons.Location = new System.Drawing.Point(330, 86);
-            this.lblPersons.Name = "lblPersons";
-            this.lblPersons.Size = new System.Drawing.Size(54, 13);
-            this.lblPersons.TabIndex = 12;
-            this.lblPersons.Text = "Personas:";
+            this.lblPersonas.AutoSize = true;
+            this.lblPersonas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonas.Location = new System.Drawing.Point(324, 86);
+            this.lblPersonas.Name = "lblPersonas";
+            this.lblPersonas.Size = new System.Drawing.Size(63, 13);
+            this.lblPersonas.TabIndex = 12;
+            this.lblPersonas.Text = "Personas:";
             // 
             // nudPersons
             // 
@@ -293,9 +299,10 @@
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(395, 86);
+            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Location = new System.Drawing.Point(393, 86);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(36, 13);
+            this.lblClass.Size = new System.Drawing.Size(42, 13);
             this.lblClass.TabIndex = 14;
             this.lblClass.Text = "Clase:";
             // 
@@ -312,35 +319,36 @@
             this.cboClass.Size = new System.Drawing.Size(105, 21);
             this.cboClass.TabIndex = 15;
             // 
-            // lblCurrency
+            // lblmoneda
             // 
-            this.lblCurrency.AutoSize = true;
-            this.lblCurrency.Location = new System.Drawing.Point(186, 30);
-            this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(49, 13);
-            this.lblCurrency.TabIndex = 16;
-            this.lblCurrency.Text = "Moneda:";
+            this.lblmoneda.AutoSize = true;
+            this.lblmoneda.Location = new System.Drawing.Point(186, 30);
+            this.lblmoneda.Name = "lblmoneda";
+            this.lblmoneda.Size = new System.Drawing.Size(56, 13);
+            this.lblmoneda.TabIndex = 16;
+            this.lblmoneda.Text = "Moneda:";
             // 
-            // cboCurrency
+            // cbomoneda
             // 
-            this.cboCurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCurrency.Items.AddRange(new object[] {
+            this.cbomoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbomoneda.Items.AddRange(new object[] {
             "$ Pesos",
             "US$ Dólares"});
-            this.cboCurrency.Location = new System.Drawing.Point(241, 27);
-            this.cboCurrency.Name = "cboCurrency";
-            this.cboCurrency.Size = new System.Drawing.Size(120, 21);
-            this.cboCurrency.TabIndex = 17;
+            this.cbomoneda.Location = new System.Drawing.Point(241, 27);
+            this.cbomoneda.Name = "cbomoneda";
+            this.cbomoneda.Size = new System.Drawing.Size(120, 21);
+            this.cbomoneda.TabIndex = 17;
             // 
-            // btnCalculate
+            // btnCalcular
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(400, 150);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(100, 30);
-            this.btnCalculate.TabIndex = 18;
-            this.btnCalculate.Text = "Buscar";
-            this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(400, 150);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(100, 30);
+            this.btnCalcular.TabIndex = 18;
+            this.btnCalcular.Text = "Buscar";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // lblInfo
             // 
@@ -351,46 +359,48 @@
             this.lblInfo.TabIndex = 20;
             this.lblInfo.Visible = false;
             // 
-            // grpPromotions
+            // grpDescuent
             // 
-            this.grpPromotions.Controls.Add(this.lblPromotionsText);
-            this.grpPromotions.Location = new System.Drawing.Point(15, 183);
-            this.grpPromotions.Name = "grpPromotions";
-            this.grpPromotions.Size = new System.Drawing.Size(486, 56);
-            this.grpPromotions.TabIndex = 19;
-            this.grpPromotions.TabStop = false;
-            this.grpPromotions.Text = "Promociones y Descuentos";
-            this.grpPromotions.Enter += new System.EventHandler(this.grpPromotions_Enter);
+            this.grpDescuent.Controls.Add(this.lblPromocionText);
+            this.grpDescuent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDescuent.Location = new System.Drawing.Point(15, 183);
+            this.grpDescuent.Name = "grpDescuent";
+            this.grpDescuent.Size = new System.Drawing.Size(486, 56);
+            this.grpDescuent.TabIndex = 19;
+            this.grpDescuent.TabStop = false;
+            this.grpDescuent.Text = "Promociones y Descuentos ";
+            this.grpDescuent.Enter += new System.EventHandler(this.grpPromotions_Enter);
             // 
-            // lblPromotionsText
+            // lblPromocionText
             // 
-            this.lblPromotionsText.Location = new System.Drawing.Point(6, 16);
-            this.lblPromotionsText.Name = "lblPromotionsText";
-            this.lblPromotionsText.Size = new System.Drawing.Size(460, 37);
-            this.lblPromotionsText.TabIndex = 0;
-            this.lblPromotionsText.Text = "Precio por kilómetro: 5 pesos.\r\nDescuento 50% si la distancia >= 100 km y la esta" +
+            this.lblPromocionText.Location = new System.Drawing.Point(6, 16);
+            this.lblPromocionText.Name = "lblPromocionText";
+            this.lblPromocionText.Size = new System.Drawing.Size(460, 37);
+            this.lblPromocionText.TabIndex = 0;
+            this.lblPromocionText.Text = "Precio por kilómetro: 5 pesos.\r\nDescuento 50% si la distancia >= 100 km y la esta" +
     "ncia >= 7 días.";
             // 
-            // grpPayment
+            // grpPay
             // 
-            this.grpPayment.Controls.Add(this.lblTotal);
-            this.grpPayment.Controls.Add(this.txtTotal);
-            this.grpPayment.Controls.Add(this.btnPay);
-            this.grpPayment.Controls.Add(this.cboCurrency);
-            this.grpPayment.Controls.Add(this.lblCurrency);
-            this.grpPayment.Location = new System.Drawing.Point(16, 254);
-            this.grpPayment.Name = "grpPayment";
-            this.grpPayment.Size = new System.Drawing.Size(485, 70);
-            this.grpPayment.TabIndex = 21;
-            this.grpPayment.TabStop = false;
-            this.grpPayment.Text = "Pago";
+            this.grpPay.Controls.Add(this.lblTotal);
+            this.grpPay.Controls.Add(this.txtTotal);
+            this.grpPay.Controls.Add(this.btnPay);
+            this.grpPay.Controls.Add(this.cbomoneda);
+            this.grpPay.Controls.Add(this.lblmoneda);
+            this.grpPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpPay.Location = new System.Drawing.Point(16, 254);
+            this.grpPay.Name = "grpPay";
+            this.grpPay.Size = new System.Drawing.Size(485, 70);
+            this.grpPay.TabIndex = 21;
+            this.grpPay.TabStop = false;
+            this.grpPay.Text = "Pago";
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(20, 30);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(34, 13);
+            this.lblTotal.Size = new System.Drawing.Size(40, 13);
             this.lblTotal.TabIndex = 0;
             this.lblTotal.Text = "Total:";
             // 
@@ -412,43 +422,44 @@
             this.btnPay.UseVisualStyleBackColor = true;
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
-            // Form1
+            // AirLux
             // 
-            this.AcceptButton = this.btnCalculate;
+            this.AcceptButton = this.btnCalcular;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.ClientSize = new System.Drawing.Size(520, 330);
-            this.Controls.Add(this.lblFlights);
-            this.Controls.Add(this.cboToProvince);
-            this.Controls.Add(this.lblDistance);
-            this.Controls.Add(this.txtDistance);
+            this.ClientSize = new System.Drawing.Size(520, 335);
+            this.Controls.Add(this.lbltitulo);
+            this.Controls.Add(this.cboDeProvincias2);
+            this.Controls.Add(this.lblDistancia);
+            this.Controls.Add(this.txtDistancia);
             this.Controls.Add(this.lblFrom);
-            this.Controls.Add(this.cboFromProvince);
-            this.Controls.Add(this.cboFromAirport);
-            this.Controls.Add(this.lblTo);
-            this.Controls.Add(this.cboToAirport);
-            this.Controls.Add(this.lblDeparture);
-            this.Controls.Add(this.dtpDeparture);
+            this.Controls.Add(this.cboDeProvincias);
+            this.Controls.Add(this.cboFromAero);
+            this.Controls.Add(this.lblvoy);
+            this.Controls.Add(this.cbofromAero2);
+            this.Controls.Add(this.lblsalida);
+            this.Controls.Add(this.dtpSalida);
             this.Controls.Add(this.lblReturn);
             this.Controls.Add(this.dtpReturn);
-            this.Controls.Add(this.lblPersons);
+            this.Controls.Add(this.lblPersonas);
             this.Controls.Add(this.nudPersons);
             this.Controls.Add(this.lblClass);
             this.Controls.Add(this.cboClass);
-            this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.grpPromotions);
-            this.Controls.Add(this.grpPayment);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.grpDescuent);
+            this.Controls.Add(this.grpPay);
             this.Controls.Add(this.lblInfo);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "AirLux";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AirLux";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPersons)).EndInit();
-            this.grpPromotions.ResumeLayout(false);
-            this.grpPayment.ResumeLayout(false);
-            this.grpPayment.PerformLayout();
+            this.grpDescuent.ResumeLayout(false);
+            this.grpPay.ResumeLayout(false);
+            this.grpPay.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
